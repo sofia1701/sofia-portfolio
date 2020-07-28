@@ -1,4 +1,4 @@
-##Personal Portfolio
+## Personal Portfolio
 
 Created with HTML, CSS and Javascript.
 
@@ -6,6 +6,6 @@ Created with HTML, CSS and Javascript.
 
 Live here:  https://sofia1701.github.io/sofia-portfolio
 
-###Author
+### Author
 
 Sofia Dionisio
