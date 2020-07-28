@@ -77,7 +77,8 @@ main {
   grid-gap: 30px;
   grid-template-areas:
     "bioimage bio bio"
-    "education education educationskills";
+    "education education education"
+    ;
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
