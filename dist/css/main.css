@@ -190,6 +190,24 @@ main {
   .text-link:hover {
     color: #ee921a; }
 
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .box div {
+    font-size: 1.5rem;
+    border: 2px #ee921a solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    transition: all 0.5s ease-out; }
+    .box div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #ee921a;
+      color: #4b4b4b; }
+      .box div:hover span {
+        color: white; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
