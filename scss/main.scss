@@ -122,6 +122,10 @@ main {
   grid-template-columns: repeat(1, 1fr);
 }
 
+.item {
+  border-bottom: $secondary-color 5px solid;
+}
+
 .text-link {
   color: white;
 
