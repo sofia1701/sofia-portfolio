@@ -120,10 +120,11 @@ main {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(1, 1fr);
+  border-bottom: $secondary-color 5px solid;
 }
 
 .item {
-  border-bottom: $secondary-color 5px solid;
+  display: flex;
 }
 
 .text-link {
