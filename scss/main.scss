@@ -77,7 +77,7 @@ main {
   grid-gap: 30px;
   grid-template-areas:
     "bioimage bio bio"
-    "education education education"
+    "job1 job2 job3"
     ;
   grid-template-columns: repeat(3, 1fr);
 
@@ -96,43 +96,53 @@ main {
     font-size: 1.2rem;
   }
 
-  .education {
-    grid-area: education;
+  .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
-  }
-
-  .education-skills {
-    grid-area: educationskills;
-  }
-
-  .skills {
-    display: flex;
-  }
-
-  .skills ul {
-    list-style: none;
   }
 }
 
 .projects {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(1, 1fr);
-  border-bottom: $secondary-color 5px solid;
-}
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
 
-.item {
-  display: flex;
-}
+  img {
+    width: 100%;
+    max-height: 400px;
+    border: 3px #fff solid;
 
-.text-link {
-  color: white;
-
-  &:hover {
-    color: $secondary-color;
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
   }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: $secondary-color;
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: white;
+  color: #333;
 }
 
 .box {
