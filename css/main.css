@@ -39,14 +39,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: rgba(75, 75, 75, 0.9);
+    background: rgba(14, 14, 16, 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: rgba(88, 88, 88, 0.9);
+    background: rgba(26, 26, 29, 0.9);
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -63,7 +63,7 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #ee921a; }
+      color: #DC143C; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -75,7 +75,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #ee921a; }
+      color: #DC143C; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -93,7 +93,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #585858;
+  background: #1a1a1d;
   color: white;
   height: 100%;
   margin: 0;
@@ -111,7 +111,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(88, 88, 88, 0.7); }
+      background: rgba(26, 26, 29, 0.7); }
 
 h1,
 h2,
@@ -127,7 +127,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(93, 93, 93, 0.5); }
+    background: rgba(31, 31, 34, 0.5); }
 
 a {
   color: white;
@@ -139,7 +139,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #ee921a; }
+  color: #DC143C; }
 
 main {
   padding: 4rem;
@@ -149,7 +149,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #ee921a;
+        color: #DC143C;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -159,7 +159,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "education education education";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -170,31 +170,41 @@ main {
     font-size: 1.5rem; }
   .about-info .text-description {
     font-size: 1.2rem; }
-  .about-info .education {
-    grid-area: education;
-    background: #656565;
+  .about-info .job {
+    background: #26262a;
     padding: 0.5rem;
-    border-bottom: #ee921a 5px solid; }
-  .about-info .education-skills {
-    grid-area: educationskills; }
-  .about-info .skills {
-    display: flex; }
-  .about-info .skills ul {
-    list-style: none; }
+    border-bottom: #DC143C 5px solid; }
 
 .projects {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(1, 1fr);
-  border-bottom: #ee921a 5px solid; }
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); }
+  .projects img {
+    width: 100%;
+    max-height: 400px;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #DC143C;
+      transition: all 0.5s ease-out; }
 
-.item {
-  display: flex; }
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #DC143C;
+    color: set-text-color(#DC143C); }
 
-.text-link {
-  color: white; }
-  .text-link:hover {
-    color: #ee921a; }
+.btn-dark {
+  background: #DC143C;
+  color: #fff; }
+
+.btn-light {
+  background: white;
+  color: #333; }
 
 .box {
   display: flex;
@@ -202,23 +212,23 @@ main {
   justify-content: center; }
   .box div {
     font-size: 1.5rem;
-    border: 2px #ee921a solid;
+    border: 2px #DC143C solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     margin-top: 3rem;
     transition: all 0.5s ease-out; }
     .box div:hover {
       padding: 0.5rem 1.5rem;
-      background: #ee921a;
-      color: #4b4b4b; }
+      background: #DC143C;
+      color: #0e0e10; }
       .box div:hover span {
         color: white; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #4b4b4b;
-  color: set-text-color(#585858);
+  background: #0e0e10;
+  color: set-text-color(#1a1a1d);
   height: 60px; }
 
 @media screen and (max-width: 768px) {
@@ -247,7 +257,7 @@ main {
       width: 120px;
       height: 120px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'education';
+    grid-template-areas: 'bioimage' 'bio' 'job';
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
@@ -261,16 +271,23 @@ main {
     margin-top: 1rem;
     font-size: 5rem; }
   .text-title {
-    color: #ee921a;
+    color: #DC143C;
     font-size: 2rem; }
-  .description-about {
-    font-size: 1.1rem; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'education';
+    grid-template-areas: 'bioimage' 'bio' 'job';
     grid-template-columns: 1fr; }
   .text-description {
     font-size: 1rem; }
-  .text-link {
-    color: #ee921a; }
   .box div {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; }
+  .projects {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(1, 1fr); }
+    .projects img {
+      width: 100%;
+      border: 3px #fff solid; }
+      .projects img:hover {
+        opacity: 0.5;
+        border-color: #DC143C;
+        transition: all 0.5s ease-out; } }
